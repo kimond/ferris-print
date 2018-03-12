@@ -1,5 +1,5 @@
 [package]
-name = "ferrisprint"
+name = "ferris_print"
 version = "0.1.0"
 authors = ["Kim Desrosiers <kimdesro@gmail.com>"]
 
