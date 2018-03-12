@@ -5,7 +5,7 @@ Ferris print
 A simple macro to print using ferris say.
 
 ## Why?
-Sometime I am bored with the classic `println!`. But with `ferrisprint!` my output is more exiting.
+Sometime I am bored with the classic `println!`. But with `ferrisprint!` my output is more exciting.
 
 ## Instruction
 Put the following in you `Cargo.toml`:
