@@ -2,6 +2,13 @@
 name = "ferris_print"
 version = "0.1.0"
 authors = ["Kim Desrosiers <kimdesro@gmail.com>"]
+license = "MIT"
+description = "A simple macro to print using ferris say."
+homepage = "https://github.com/kimond/ferris-print"
+repository = "https://github.com/kimond/ferris-print"
+readme = "README.md"
+
+keywords = ["print", "ferris", "say", "macro"]
 
 [dependencies]
 ferris-says = "0.1.1"

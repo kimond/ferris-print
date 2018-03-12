@@ -46,3 +46,6 @@ The code above will print out this:
                 '_   -   _'
                 / '-----' \
 ```
+
+## Credits
+* [@mgattozzi](https://github.com/mgattozzi) for [ferris-say](https://github.com/mgattozzi/ferris-says)
