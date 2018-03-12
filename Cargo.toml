@@ -1,0 +1,7 @@
+[package]
+name = "ferrisprint"
+version = "0.1.0"
+authors = ["Kim Desrosiers <kimdesro@gmail.com>"]
+
+[dependencies]
+ferris-says = "0.1.1"
