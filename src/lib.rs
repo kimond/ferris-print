@@ -1,32 +1,29 @@
-extern crate ferris_says;
-
-use ferris_says::say;
-use std::io::{stdout, BufWriter};
+pub extern crate ferris_says;
 
 #[macro_export]
 macro_rules! ferrisprint {
 ($fmt:expr) => {
         {
+            use std::io::{stdout, BufWriter};
             let stdout = stdout();
             let width = 24;
             let mut writer = BufWriter::new(stdout.lock());
-            say(concat!($fmt).as_bytes(), width, &mut writer).unwrap();
+            $crate::ferris_says::say(concat!($fmt).as_bytes(), width, &mut writer).unwrap();
         }
     };
 ($fmt:expr, $($arg:tt)*) => {
         {
+            use std::io::{stdout, BufWriter};
             let stdout = stdout();
             let width = 24;
             let mut writer = BufWriter::new(stdout.lock());
-            say(format!(concat!($fmt), $($arg)*).as_bytes(), width, &mut writer).unwrap();
+            $crate::ferris_says::say(format!(concat!($fmt), $($arg)*).as_bytes(), width, &mut writer).unwrap();
         }
     };
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn ferrisprint_macro_works() {
         ferrisprint!("hola");
