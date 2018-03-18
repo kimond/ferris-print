@@ -1,4 +1,11 @@
-pub extern crate ferris_says;
+use std::io::Result as IoResult;
+
+extern crate ferris_says;
+
+pub fn say<W>(input: &[u8], width: usize, writer: &mut W) -> IoResult<()>
+    where W: std::io::Write {
+    ferris_says::say(input, width, writer)
+}
 
 #[macro_export]
 macro_rules! ferrisprint {
@@ -8,7 +15,7 @@ macro_rules! ferrisprint {
             let stdout = stdout();
             let width = 24;
             let mut writer = BufWriter::new(stdout.lock());
-            $crate::ferris_says::say(concat!($fmt).as_bytes(), width, &mut writer).unwrap();
+            $crate::say(concat!($fmt).as_bytes(), width, &mut writer).unwrap();
         }
     };
 ($fmt:expr, $($arg:tt)*) => {
@@ -17,7 +24,7 @@ macro_rules! ferrisprint {
             let stdout = stdout();
             let width = 24;
             let mut writer = BufWriter::new(stdout.lock());
-            $crate::ferris_says::say(format!(concat!($fmt), $($arg)*).as_bytes(), width, &mut writer).unwrap();
+            $crate::say(format!(concat!($fmt), $($arg)*).as_bytes(), width, &mut writer).unwrap();
         }
     };
 }
