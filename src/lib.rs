@@ -1,6 +1,6 @@
-use std::io::Result as IoResult;
-
 extern crate ferris_says;
+
+use std::io::Result as IoResult;
 
 pub fn say<W>(input: &[u8], width: usize, writer: &mut W) -> IoResult<()>
     where W: std::io::Write {
