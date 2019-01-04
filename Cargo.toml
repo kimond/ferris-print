@@ -10,5 +10,7 @@ readme = "README.md"
 
 keywords = ["print", "ferris", "say", "macro"]
 
+edition = '2018'
+
 [dependencies]
 ferris-says = "0.1.1"
