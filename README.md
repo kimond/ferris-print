@@ -18,15 +18,13 @@ ferris_print = "0.1"
 Then import the crate with:
 
 ```rust
-#[macro_use]
-extern crate ferris_print;
+use ferris_print::ferrisprint;
 ```
 
 ### Example
 
 ```rust
-#[macro_use]
-extern crate ferris_print;
+use ferris_print::ferrisprint;
 
 fn main() {
     ferrisprint!("Hello world");
